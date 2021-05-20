@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "styles/new_tweet.css" %}">
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <div class="form">
+        {% for new_tweet in form %}
+             <form action="{% url 'twitter_app:create_tweet' %}" method="post">
+
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="button-place">
+                <button name="submit">Tweet</button>
+                </div>
+            </form>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

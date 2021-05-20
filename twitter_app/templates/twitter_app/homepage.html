@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "styles/homepage.css" %}">
+</head>
+<body>
+<div class="container">
+            <div class="divider">
+            <div id="main-header">
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">My Tweets</a></li>
+                    <li><a href="#">Our Regulation</a></li>
+                </ul>
+            </div>
+                <input type="search" placeholder="&#128269; search Twitter"/>
+            </div>
+{% block content %}
+    <h2>Today's Tweets</h2>
+    {% for tweet in tweets %}
+        <h4>{{ tweet.text }} <small>Date added: {{ tweet.date_published }}<br></small></h4>
+
+    {% endfor %}
+{% endblock %}
+</div>
+</body>
+</html>

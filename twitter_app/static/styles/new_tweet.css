@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: skyblue;
+    width: 1000px;
+    height: 900px;
+    margin: 0;
+    line-height: 1.6em;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 0px 5px 0px 5px;
+    min-height: 100vh;
+    height: auto;
+}
+
+.form{
+    height: 100px;
+    width: 100%;
+}
+
+.form textarea{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 90%;
+}
+
+.form button{
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    outline: none;
+}
+
+.form button:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+.button-place{
+    padding-left: 350px;
+}
